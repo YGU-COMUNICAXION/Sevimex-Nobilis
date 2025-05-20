@@ -1,0 +1,153 @@
+---
+import { getImage } from "astro:assets";
+
+import bgSlide1 from "@assets/img/bg1.png";
+import bgSlide2 from "@assets/img/bg2.png";
+import bgSlide3 from "@assets/img/bg3.png";
+
+const bg1 = await getImage({ src: bgSlide1 });
+const bg2 = await getImage({ src: bgSlide2 });
+const bg3 = await getImage({ src: bgSlide3 });
+
+const slides = [
+  {
+    image: bg1,
+    title: "Tecnología confiable<br/> para el entorno médico.",
+    text: "Servidores y estaciones de trabajo listas para RIS, PACS y más.",
+    cta: {
+      label: "VER PRODUCTOS",
+      href: "#productos",
+    },
+  },
+  {
+    image: bg2,
+    title: "Almacenamiento<br/> inteligente.",
+    text: "RAID5 y hot-swap para máxima continuidad operativa.",
+    cta: {
+      label: "VER PRODUCTOS",
+      href: "#productos",
+    },
+  },
+  {
+    image: bg3,
+    title: "Infraestructura<br/> lista para escalar.",
+    text: "Virtualización, estabilidad y crecimiento sin límites.",
+    cta: {
+      label: "VER PRODUCTOS",
+      href: "#productos",
+    },
+  },
+];
+---
+
+<section id="hero-slider" class="relative overflow-hidden">
+  <div class="relative w-full h-[72vh]">
+    <div class="absolute inset-0 transition-all duration-700 ease-in-out">
+      {
+        slides.map((slide, index) => (
+          <div
+            class={`absolute inset-0 w-full h-full bg-cover bg-center transition-opacity duration-700 ease-in-out ${index === 0 ? "opacity-100 z-10" : "opacity-0 z-0"}`}
+            style={`background-image: url(${slide.image.src});`}
+            data-slide={index}
+          >
+            <div class="bg-black/50 w-full h-full flex items-center justify-center">
+              <div class="container px-8 md:px-12 lg:px-4 text-white">
+                <h1
+                  class="font-title text-3xl md:text-5xl leading-tight mb-8 uppercase"
+                  set:html={slide.title}
+                />
+                <p class="font-text text-base md:text-lg mb-6">{slide.text}</p>
+                <a
+                  href={slide.cta.href}
+                  class="inline-block bg-primary-3 hover:bg-primary-2 text-white font-semibold px-6 py-3 rounded-full transition-colors duration-300 text-sm md:text-base"
+                >
+                  {slide.cta.label}
+                </a>
+              </div>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+
+  <!-- Flechas laterales -->
+  <button
+    id="prev-slide"
+    aria-label="Anterior"
+    class="absolute z-30 left-2 md:left-4 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full transition disabled:opacity-30 hover:cursor-pointer"
+  >
+    &#10094;
+  </button>
+  <button
+    id="next-slide"
+    aria-label="Siguiente"
+    class="absolute z-30 right-2 md:right-4 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full transition disabled:opacity-30 hover:cursor-pointer"
+  >
+    &#10095;
+  </button>
+
+  <!-- Indicadores -->
+  <div
+    class="absolute bottom-5 left-1/2 transform -translate-x-1/2 flex gap-2 z-20"
+  >
+    {
+      slides.map((_, index) => (
+        <button
+          class="w-3 h-3 rounded-full bg-white/60 hover:bg-white transition-all hover:cursor-pointer"
+          data-index={index}
+        />
+      ))
+    }
+  </div>
+</section>
+
+<script>
+  const slides = document.querySelectorAll("[data-slide]");
+  const buttons = document.querySelectorAll("[data-index]");
+  const prevBtn = document.getElementById(
+    "prev-slide"
+  ) as HTMLButtonElement | null;
+  const nextBtn = document.getElementById(
+    "next-slide"
+  ) as HTMLButtonElement | null;
+  let current = 0;
+
+  const showSlide = (index: number) => {
+    slides.forEach((slide, i) => {
+      slide.classList.toggle("opacity-100", i === index);
+      slide.classList.toggle("z-10", i === index);
+      slide.classList.toggle("opacity-0", i !== index);
+      slide.classList.toggle("z-0", i !== index);
+    });
+
+    if (prevBtn && nextBtn) {
+      prevBtn.disabled = index === 0;
+      nextBtn.disabled = index === slides.length - 1;
+    }
+
+    current = index;
+  };
+
+  buttons.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const index = parseInt((btn as HTMLElement).dataset.index as string);
+      showSlide(index);
+    });
+  });
+
+  prevBtn?.addEventListener("click", () => {
+    if (current > 0) showSlide(current - 1);
+  });
+
+  nextBtn?.addEventListener("click", () => {
+    if (current < slides.length - 1) showSlide(current + 1);
+  });
+
+  // setInterval(() => {
+  //   const next = (current + 1) % slides.length;
+  //   showSlide(next);
+  // }, 8000);
+
+  showSlide(current);
+</script>

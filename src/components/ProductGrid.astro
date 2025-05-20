@@ -1,0 +1,107 @@
+---
+// src/components/ProductGrid.astro
+import ProductCard from "./ProductCard.astro";
+import ProductModal from "./ProductModal.astro";
+import imgC310S from "@assets/img/c310s.png";
+import imgC510S from "@assets/img/c510s.png";
+
+const products = [
+  {
+    id: "c310s",
+    name: "C310S",
+    description:
+      "Monitor de grado médico de 21.3” 3MP para diagnóstico general. Ideal para MRI, rayos X y PET/CT.",
+    largeDescription: `Monitor de 3 megapíxeles con brillo y contraste ultraaltos, amplio ángulo de visión y bajo consumo de energía. 
+    <br /><br />
+    Ideal para sistemas PACS e imágenes médicas.
+    <br /><br />
+    Cuenta con retroiluminación LED y diseño ultra delgado de panel completo.`,
+    image: imgC310S,
+    datasheetUrl:
+      "https://drive.google.com/file/d/1vCJ10uXot-thg70DdxP5yFBGFT8ThkMP/view",
+    features: [
+      "Excelente compatibilidad",
+      "Alto brillo y cumplimiento DICOM",
+      "Tecnología de calibración automática",
+      "Resolución y nivel de brillo excepcionales",
+      "Tecnología de luz azul reducida",
+      "Gamma híbrido / independiente",
+      "Sistema adaptativo de luz ambiente",
+      "Óptimo consumo energético",
+    ],
+  },
+  {
+    id: "c510s",
+    name: "C510S",
+    description:
+      "Monitor de grado médico de 21.3” 5MP para mamografía y ultrasonido. Alta precisión y función KVM.",
+    largeDescription: `
+    Monitor de 5 megapíxeles con alta resolución, brillo y contraste ultraaltos, bajo consumo y amplia compatibilidad con sistemas PACS e imágenes médicas como mamografía digital. 
+    <br /><br />
+    Su tecnología de luz azul reducida protege la visión al disminuir más del 50% de la luz dañina. `,
+    image: imgC510S,
+    datasheetUrl: "https://tudominio.com/ficha-tecnica-c510s.pdf",
+    features: [
+      "Excelente compatibilidad",
+      "Alta precisión y cumplimiento DICOM",
+      "Tecnología de calibración de uniformidad",
+      "Resolución y nivel de brillo excepcionales",
+      "Tecnología de luz azul reducida",
+      "Gamma híbrido / independiente",
+      "Sistema adaptativo de luz ambiente",
+      "Consumo energético promedio",
+    ],
+  },
+];
+---
+
+<section class="py-32 lg:py-48" id={"productos"}>
+  <h2 class="text-primary-1 text-3xl font-light text-center mb-2 uppercase">
+    Nuestros Productos
+  </h2>
+  <h3 class="text-primary-1 text-xl font-bold text-center mb-16">
+    Monitores de grado médico
+  </h3>
+
+  <div class="container mx-auto px-6 grid lg:grid-cols-2 gap-8">
+    {products.map((product) => <ProductCard product={product} />)}
+  </div>
+
+  {products.map((product) => <ProductModal product={product} />)}
+</section>
+
+<script>
+  document.addEventListener("astro:page-load", () => {
+    document.querySelectorAll(".product-card").forEach((card) => {
+      card.addEventListener("click", () => {
+        const productId = (card as HTMLElement).dataset.product;
+
+        const modal = document.getElementById(`modal-${productId}`);
+        if (modal) {
+          modal.classList.remove("hidden");
+        } else {
+          console.error(`Modal with ID modal-${productId} not found`);
+        }
+      });
+    });
+
+    // Cierre del modal
+    document.querySelectorAll(".close-modal").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const modal = btn.closest("[id^='modal-']");
+        if (modal) {
+          modal.classList.add("hidden");
+        }
+      });
+    });
+
+    // Opcional: clic fuera del modal cierra también
+    document.querySelectorAll("[id^='modal-']").forEach((modal) => {
+      modal.addEventListener("click", (e) => {
+        if (e.target === modal) {
+          modal.classList.add("hidden");
+        }
+      });
+    });
+  });
+</script>

@@ -1,0 +1,76 @@
+<section class="bg-primary-3 py-12">
+  <div
+    class="container mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-6 text-center text-primary-1"
+  >
+    <div>
+      <p class="text-4xl xl:text-6xl font-extrabold counter" data-target="2">
+        0
+      </p>
+      <p class="mt-2 text-2xl font-semibold">Centros I + D</p>
+    </div>
+    <div>
+      <p class="text-4xl xl:text-6xl font-extrabold counter" data-target="100">
+        0
+      </p>
+      <p class="mt-2 text-2xl font-semibold">Países con presencia</p>
+    </div>
+    <div>
+      <p class="text-4xl xl:text-6xl font-extrabold counter" data-target="8000">
+        0
+      </p>
+      <p class="mt-2 text-2xl font-semibold">Hospitales usuarios</p>
+    </div>
+    <div>
+      <p
+        class="text-4xl xl:text-6xl font-extrabold counter"
+        data-target="300000"
+      >
+        0
+      </p>
+      <p class="mt-2 text-2xl font-semibold">Producción anual</p>
+    </div>
+  </div>
+</section>
+
+<script>
+  document.addEventListener("astro:page-load", () => {
+    const counters = document.querySelectorAll(".counter");
+
+    const animateCounter = (el: Element, target: number) => {
+      let count = 0;
+
+      // Velocidad individual
+      const speed = Math.max(10, target / 100); // ajusta la velocidad
+
+      const update = () => {
+        count += Math.ceil(target / 50);
+        if (count >= target) {
+          el.textContent = target.toLocaleString() + (target < 100 ? "" : "+");
+        } else {
+          el.textContent = count.toLocaleString();
+          requestAnimationFrame(update);
+        }
+      };
+
+      update();
+    };
+
+    const onVisible = (el: Element, callback: { (): void; (): void }) => {
+      const observer = new IntersectionObserver(
+        ([entry]) => {
+          if (entry.isIntersecting) {
+            callback();
+            observer.disconnect();
+          }
+        },
+        { threshold: 0.5 }
+      );
+      observer.observe(el);
+    };
+
+    counters.forEach((counter) => {
+      const target = parseInt((counter as HTMLElement).dataset.target!, 10);
+      onVisible(counter, () => animateCounter(counter, target));
+    });
+  });
+</script>
