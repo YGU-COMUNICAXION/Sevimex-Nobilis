@@ -3,7 +3,7 @@
   "name": "Plus",
   "description": "Rendimiento para Centros de Datos Médicos. Intel Xeon Silver 4509Y (8 núcleos/16 hilos), para almacenamiento clínico, servidores e historiales.",
   "largeDescription": "Solución robusta para almacenar grandes volúmenes de datos clínicos a largo plazo. Ofrece redundancia, velocidad y disponibilidad continua con opción de personalización gracias a la ausencia de sistema operativo preinstalado.",
-  "image": "@assets/img/products/almacenamiento/plus.png",
+  "image": "@assets/img/products/almacenamiento/PLUS.png",
   "category": "Almacenamiento",
   "features": [
     "Rendimiento para centros de datos médicos",

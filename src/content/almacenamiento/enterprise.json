@@ -3,7 +3,7 @@
   "name": "Enterprise",
   "description": "Rendimiento para Centros de Datos Médicos. Intel Xeon Silver 4509Y (8 núcleos/16 hilos), para almacenamiento clínico intensivo.",
   "largeDescription": "Proporciona almacenamiento confiable y de alta capacidad para estudios médicos, históricos y respaldos. Ideal para mantener archivos clínicos seguros, con posibilidad de expansión y componentes de nivel empresarial.",
-  "image": "@assets/img/products/almacenamiento/enterprise.png",
+  "image": "@assets/img/products/almacenamiento/ENTERPRISE.png",
   "category": "Almacenamiento",
   "features": [
     "Rendimiento para centros de datos médicos",
