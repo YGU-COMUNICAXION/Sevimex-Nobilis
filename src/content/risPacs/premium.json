@@ -1,6 +1,6 @@
 {
-  "id": "premium-dual",
-  "name": "Premium (DUAL)",
+  "id": "risPlus-premium",
+  "name": "Premium",
   "description": "Rendimiento Clínico Sólido. 2× Xeon Silver 4510 (24 núcleos/48 hilos), ideal para infraestructura crítica en radiología.",
   "largeDescription": "Optimizado para entornos con alto volumen de imágenes médicas, combina alto rendimiento, eficiencia y disponibilidad continua. Permite ejecutar múltiples tareas virtuales con rapidez y seguridad y su almacenamiento es escalable sin interrupciones. Garantiza operación constante en servicios críticos.",
   "image": "@assets/img/products/RIS+PACS/PREMIUM.png",

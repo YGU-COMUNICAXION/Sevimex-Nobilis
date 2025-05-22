@@ -4,56 +4,22 @@ import { getCollection } from "astro:content";
 import ProductCard from "./ProductCard.astro";
 import ProductModal from "./ProductModal.astro";
 
-const products = await getCollection("workstation");
+const products = await getCollection("risPacs");
 ---
 
 <section class="py-32 lg:py-48" id={"productos"}>
-  <h2 class="text-primary-1 text-3xl font-light text-center mb-2 uppercase">
+  <h2
+    class="text-primary-1 text-3xl font-light text-center mb-12 lg:mb-16 uppercase"
+  >
     Nuestros Productos
   </h2>
-  <h3 class="text-primary-1 text-xl font-bold text-center mb-16">
-    Monitores de grado médico
-  </h3>
 
-  <div class="container mx-auto px-6 grid lg:grid-cols-2 gap-8">
-    {products.map((product) => <ProductCard product={product.data} />)}
-  </div>
+  <>
+    <div class="container mx-auto px-6 grid lg:grid-cols-2 gap-8">
+      {products.map((product) => <ProductCard product={product.data} />)}
+    </div>
 
-  {products.map((product) => <ProductModal product={product.data} />)}
+    {products.map((product) => <ProductModal product={product.data} />)}
+  </>
 </section>
 
-<script>
-  document.addEventListener("astro:page-load", () => {
-    document.querySelectorAll(".product-card").forEach((card) => {
-      card.addEventListener("click", () => {
-        const productId = (card as HTMLElement).dataset.product;
-
-        const modal = document.getElementById(`modal-${productId}`);
-        if (modal) {
-          modal.classList.remove("hidden");
-        } else {
-          console.error(`Modal with ID modal-${productId} not found`);
-        }
-      });
-    });
-
-    // Cierre del modal
-    document.querySelectorAll(".close-modal").forEach((btn) => {
-      btn.addEventListener("click", () => {
-        const modal = btn.closest("[id^='modal-']");
-        if (modal) {
-          modal.classList.add("hidden");
-        }
-      });
-    });
-
-    // Opcional: clic fuera del modal cierra también
-    document.querySelectorAll("[id^='modal-']").forEach((modal) => {
-      modal.addEventListener("click", (e) => {
-        if (e.target === modal) {
-          modal.classList.add("hidden");
-        }
-      });
-    });
-  });
-</script>

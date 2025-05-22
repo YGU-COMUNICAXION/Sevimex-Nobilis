@@ -1,6 +1,6 @@
 {
-  "id": "platinum-dual",
-  "name": "Platinum (DUAL)",
+  "id": "risPacs-platinum",
+  "name": "Platinum",
   "description": "Balance Ideal de Potencia y Eficiencia. 2× Xeon Silver 4510 (24 hilos), ideal para clínicas de volumen medio-alto.",
   "largeDescription": "Ofrece máxima potencia y confiabilidad para entornos con cargas de trabajo muy altas, como hospitales, redes de salud y centros de datos. Su arquitectura robusta permite escalar almacenamiento sin detener la operación, asegurando alta disponibilidad y virtualización avanzada.",
   "image": "@assets/img/products/RIS+PACS/PLATINUM.png",

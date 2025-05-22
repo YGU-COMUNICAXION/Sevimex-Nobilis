@@ -1,6 +1,6 @@
 {
-  "id": "plus-dual",
-  "name": "Plus (DUAL)",
+  "id": "risPlus-plus",
+  "name": "Plus",
   "description": "Máximo Rendimiento Clínico. 2× Xeon Gold 6526Y (48 núcleos/96 hilos), potencia superior para infraestructura hospitalaria.",
   "largeDescription": "Pensado para entornos con alta demanda, ofrece una plataforma potente y estable para centros de datos, virtualización y soluciones como RIS/PACS. Su capacidad de expansión y mantenimiento sin interrupciones asegura un funcionamiento continuo y confiable.",
   "image": "@assets/img/products/RIS+PACS/PLUS.png",

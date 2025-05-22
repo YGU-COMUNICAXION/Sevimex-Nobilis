@@ -1,0 +1,128 @@
+---
+import { getCollection } from "astro:content";
+import ProductCard from "./ProductCard.astro";
+import ProductModal from "./ProductModal.astro";
+
+const categories = [
+  { id: "risPacs", label: "RIS+PACS" },
+  { id: "ris", label: "RIS" },
+  { id: "pacs", label: "PACS" },
+  { id: "portal", label: "Portal" },
+  { id: "almacenamiento", label: "Almacenamiento" },
+  { id: "workstation", label: "Workstation" },
+];
+
+const allProducts = await Promise.all(
+  categories.map(async (cat) => {
+    const items = await getCollection(cat.id);
+    return { id: cat.id, products: items };
+  })
+);
+
+let activeCategory = categories[0].id;
+---
+
+<section class="py-32 lg:py-48">
+  <h2
+    class="font-inter text-primary-1 text-3xl font-light text-center mb-12 uppercase"
+  >
+    Nuestros Productos
+  </h2>
+
+  <div
+    class="flex justify-center gap-6 md:gap-8 lg:gap-12 flex-wrap mb-12 font-inter text-sm md:text-base"
+  >
+    {
+      categories.map((cat, idx) => (
+        <a
+          href="#"
+          data-category={cat.id}
+          class={`pb-1 text-primary-3 transition-all ${idx === 0 ? "font-bold border-b-2 border-primary-3" : ""}`}
+        >
+          {cat.label}
+        </a>
+      ))
+    }
+  </div>
+
+  {
+    allProducts.map(({ id, products }, idx) => (
+      <div
+        data-category-group={id}
+        class={`container mx-auto px-6 grid lg:grid-cols-2 gap-8 ${idx !== 0 ? "hidden" : ""}`}
+      >
+        {products.map((product) => (
+          <ProductCard product={product.data} />
+        ))}
+        {products.map((product) => (
+          <ProductModal product={product.data} />
+        ))}
+      </div>
+    ))
+  }
+</section>
+
+<!-- Script de cambio de categoría -->
+<script>
+  document.addEventListener("astro:page-load", () => {
+    const categoryLinks = document.querySelectorAll("[data-category]");
+    const cardsGroups = document.querySelectorAll("[data-category-group]");
+
+    categoryLinks.forEach((link) => {
+      link.addEventListener("click", (e) => {
+        e.preventDefault();
+        const selected = (link as HTMLElement).dataset.category;
+
+        categoryLinks.forEach((l) => {
+          l.classList.remove("font-bold", "border-b-2", "border-primary-1");
+        });
+        link.classList.add("font-bold", "border-b-2", "border-primary-1");
+
+        cardsGroups.forEach((group) => {
+          group.classList.add("hidden");
+        });
+        const selectedGroup = document.querySelector(
+          `[data-category-group='${selected}']`
+        );
+        selectedGroup?.classList.remove("hidden");
+      });
+    });
+  });
+</script>
+
+<!-- Script de modales -->
+<script>
+  document.addEventListener("astro:page-load", () => {
+    document.querySelectorAll(".product-card").forEach((card) => {
+      card.addEventListener("click", () => {
+        const productId = (card as HTMLElement).dataset.product;
+
+        const modal = document.getElementById(`modal-${productId}`);
+        if (modal) {
+          modal.classList.remove("hidden");
+        } else {
+          console.error(`Modal with ID modal-${productId} not found`);
+        }
+      });
+    });
+
+    // Cierre del modal
+    document.querySelectorAll(".close-modal").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const modal = btn.closest("[id^='modal-']");
+        if (modal) {
+          modal.classList.add("hidden");
+        }
+      });
+    });
+
+    // Opcional: clic fuera del modal cierra también
+    document.querySelectorAll("[id^='modal-']").forEach((modal) => {
+      modal.addEventListener("click", (e) => {
+        if (e.target === modal) {
+          modal.classList.add("hidden");
+        }
+      });
+    });
+  });
+</script>

@@ -1,5 +1,5 @@
 {
-  "id": "enterprise",
+  "id": "portal-enterprise",
   "name": "Enterprise",
   "description": "Procesamiento Web Clínico de Alto Nivel. Intel Xeon Silver 4509Y (8 núcleos/16 hilos), para sistemas de gestión hospitalaria y portales web médicos.",
   "largeDescription": "Permite a los pacientes acceder de forma segura a sus estudios e informes desde cualquier dispositivo con Internet. Brinda alta disponibilidad, rapidez y seguridad para una experiencia confiable y protegida.",

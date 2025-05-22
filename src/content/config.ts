@@ -17,8 +17,9 @@ const productsCollection = defineCollection({
 
 export const collections = {
   almacenamiento: productsCollection,
-  ris: productsCollection,
-  rispluspacs: productsCollection,
+  pacs: productsCollection,
   portal: productsCollection,
+  ris: productsCollection,
+  risPacs: productsCollection,
   workstation: productsCollection,
 };

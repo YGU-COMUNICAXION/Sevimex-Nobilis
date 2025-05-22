@@ -1,5 +1,5 @@
 {
-  "id": "plus",
+  "id": "workstation-plus",
   "name": "Plus",
   "description": "Servidor ligero para Gateway PACS/RIS. Intel i7-14700 (20 n\u00facleos / 28 hilos) para m\u00faltiples conexiones concurrentes. 32GB RAM para tareas en segundo plano sin degradaci\u00f3n.",
   "largeDescription": "Estaci\u00f3n compacta con procesador Intel i7 de 14\u00aa generaci\u00f3n. Ideal para gesti\u00f3n hospitalaria, consultas m\u00e9dicas y acceso a RIS/PACS con multitarea intensiva.",
