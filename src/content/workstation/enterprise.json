@@ -1,0 +1,19 @@
+{
+  "id": "enterprise",
+  "name": "Enterprise",
+  "description": "Estudios hasta 3000 im\u00e1genes. Intel i5-12400 con 6 n\u00facleos y 12 hilos. NVIDIA A400 con 4 MiniDP para 4 monitores.",
+  "largeDescription": "Estaci\u00f3n compacta de alto rendimiento, con memoria ampliada, GPU profesional y conectividad avanzada. Ideal para diagn\u00f3sticos, interpretaci\u00f3n de estudios y multitarrea en entornos m\u00e9dicos exigentes.",
+  "image": "@assets/img/products/WORKSTATION/ENTERPRISE.png",
+  "category": "Workstation",
+  "features": [
+    "Procesador Intel i5-12400: 6 n\u00facleos y 12 hilos.",
+    "NVIDIA A400 con 4 MiniDP: admite 4 monitores.",
+    "Red 10GbE doble para alta disponibilidad.",
+    "512GB NVMe + 1TB HDD para carga r\u00e1pida de estudios.",
+    "Paneles personalizables con acceso eficiente.",
+    "Estabilidad avanzada con 3 a\u00f1os EQCare.",
+    "WiFi, HDMI y DisplayPort integrados.",
+    "Compatible con flujos PACS, RIS y DICOM Viewer."
+  ],
+  "url": "https://drive.google.com/file/d/1jhSp-pP_x8s9wF7OHTc1dON0qj1F3UCv/view?usp=drive_link"
+}

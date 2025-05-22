@@ -4,19 +4,6 @@ import type { ImageMetadata } from "astro";
 import { Image } from "astro:assets";
 import ContactForm from "./ContactForm.astro";
 
-interface Product {
-  id: string;
-  name: string;
-  description: string;
-  largeDescription: string;
-  image: ImageMetadata;
-  datasheetUrl: string;
-  features: string[];
-}
-
-interface Props {
-  product: Product;
-}
 
 const { product } = Astro.props;
 ---

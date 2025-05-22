@@ -1,0 +1,19 @@
+{
+  "id": "platinum",
+  "name": "Platinum",
+  "description": "Agenda electr\u00f3nica y publicaci\u00f3n de discos. Intel i7-14700 con 28 hilos para tareas simult\u00e1neas. 32GB RAM + 1TB NVMe para respuesta inmediata.",
+  "largeDescription": "Estaci\u00f3n de trabajo con procesador Intel i7 de 14\u00aa generaci\u00f3n, gr\u00e1ficos NVIDIA profesionales y almacenamiento NVMe.",
+  "image": "@assets/img/products/WORKSTATION/PLATINUM.png",
+  "category": "Workstation",
+  "features": [
+    "Intel i7-14700 con 28 hilos para tareas simult\u00e1neas.",
+    "32GB RAM + 1TB NVMe para respuesta inmediata.",
+    "1x unidad DVD/RW para respaldo f\u00edsico de estudios.",
+    "Conectividad completa: 2 tarjetas PCIe USB con energ\u00eda.",
+    "Seguridad TPM + gabinete profesional ventilado.",
+    "Plataforma robusta para manejo de ex\u00e1menes y reportes.",
+    "Slot de garant\u00eda para continuidad operativa.",
+    "Ideal para \u00e1reas administrativas u operativas."
+  ],
+  "url": "https://drive.google.com/file/d/1GNdX95iPLMmFPAJzGjsfTxLlFZZrb2OF/view?usp=drive_link"
+}

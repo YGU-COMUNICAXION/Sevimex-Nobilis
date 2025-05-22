@@ -1,0 +1,19 @@
+{
+  "id": "enterprise-dual",
+  "name": "Enterprise (DUAL)",
+  "description": "Procesamiento Escalable. 2× Intel Xeon Silver 4510 (24 núcleos), para virtualización médica, RIS, PACS y entornos multiusuario.",
+  "largeDescription": "Ofrece alto poder de procesamiento para inteligencia artificial, nube y tareas críticas. Su diseño escalable permite manejar grandes volúmenes de información con eficiencia y sus bahías intercambiables facilitan el mantenimiento sin detener la operación. Ideal para centros de datos y virtualización.",
+  "image": "@assets/img/products/RIS+PACS/ENTERPRISE.png",
+  "category": "RIS+PACS",
+  "features": [
+    "Procesamiento escalable",
+    "Memoria de alto desempeño",
+    "Almacenamiento rápido y seguro",
+    "Alta disponibilidad",
+    "Conectividad profesional",
+    "Gestión empresarial",
+    "Integración clínica",
+    "Soporte total"
+  ],
+  "url": "https://drive.google.com/file/d/1i8RaCov0gYuGxAX4FMbQZlZcCdM5RfoE/view"
+}

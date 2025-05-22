@@ -1,5 +1,4 @@
 ---
-// src/components/ProductCard.astro
 import { Image } from "astro:assets";
 const { product } = Astro.props;
 ---
@@ -8,7 +7,11 @@ const { product } = Astro.props;
   data-product={product.id}
   class="bg-[#F9F9F9] product-card rounded-xl shadow transition-all duration-300 hover:ring-2 hover:ring-sky-300 cursor-pointer flex flex-col md:flex-row items-center p-6 gap-6"
 >
-  <Image src={product.image} alt={product.name} class="w-40 md:w-48 object-contain" />
+  <Image
+    src={product.image}
+    alt={product.id}
+    class="w-40 md:w-48 object-contain"
+  />
   <div>
     <h3 class="text-2xl font-medium text-primary-1 mb-2">{product.name}</h3>
     <p class="text-neutral-2 text-xl font-light mb-8">{product.description}</p>

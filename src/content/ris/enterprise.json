@@ -1,0 +1,19 @@
+{
+  "id": "enterprise-ris",
+  "name": "Enterprise",
+  "description": "Desempeño Médico Eficiente. Intel Xeon Silver 4509Y (8 núcleos/16 hilos), para RIS, servidores administrativos y de archivos clínicos.",
+  "largeDescription": "Pensado para soluciones clínicas RIS, permite una operación continua y segura incluso con múltiples usuarios. Su arquitectura estable y flexible facilita el crecimiento sin complicar el mantenimiento.",
+  "image": "@assets/img/products/RIS/ENTERPRISE.png",
+  "category": "ris",
+  "features": [
+    "Desempeño médico eficiente",
+    "Multitarea fluida",
+    "Almacenamiento rápido y seguro",
+    "Infraestructura Hot-Swap",
+    "Redundancia operativa",
+    "Protección de información médica",
+    "Escalabilidad clínica",
+    "Listo para usarse"
+  ],
+  "url": "https://drive.google.com/file/d/1pEzgkx7W-M7zzEQ1cMwMHck7XDoSHPuH/view?usp=drive_link"
+}

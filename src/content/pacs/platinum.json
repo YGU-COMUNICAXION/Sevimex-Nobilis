@@ -1,0 +1,19 @@
+{
+  "id": "platinum",
+  "name": "Platinum",
+  "description": "Alto Desempe\u00f1o para Diagn\u00f3stico Cr\u00edtico. 2x Intel Xeon Silver 4514Y (32 n\u00facleos/64 hilos) para PACS, bases de datos m\u00e9dicas y entornos multiusuario.",
+  "largeDescription": "Ideal para instituciones que gestionan grandes vol\u00famenes de estudios m\u00e9dicos, ofrece alto rendimiento, almacenamiento escalable y conectividad avanzada. Sus bah\u00edas hot-swap y sistemas redundantes aseguran operaci\u00f3n continua sin interrupciones.",
+  "image": "@assets/img/products/PACS/PLATINUM.png",
+  "category": "PACS",
+  "features": [
+    "Alto desempe\u00f1o para diagn\u00f3stico cr\u00edtico",
+    "Procesamiento multitarea avanzado",
+    "Almacenamiento cl\u00ednico r\u00e1pido",
+    "Intercambio en caliente",
+    "Disponibilidad asegurada",
+    "Seguridad de nivel empresarial",
+    "Infraestructura m\u00e9dica escalable",
+    "Implementaci\u00f3n directa"
+  ],
+  "url": "https://drive..com/file/d/1vCJ10uXot-thg70DdxP5yFBGFT8ThkMP/view"
+}

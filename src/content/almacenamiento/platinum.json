@@ -1,0 +1,19 @@
+{
+  "id": "platinum",
+  "name": "Platinum",
+  "description": "Rendimiento de Alta Densidad Médic.Intel Xeon Gold 6542Y (24 núcleos/48 hilos), para grandes volúmenes de datos clínicos e imágenes médicas.",
+  "largeDescription": "Diseñado para archivar grandes volúmenes de datos médicos históricos, ofrece alto rendimiento, gran capacidad y confiabilidad. Incorpora procesamiento potente, conectividad veloz y almacenamiento híbrido SSD/disco duro para entornos clínicos exigentes.",
+  "image": "@assets/img/products/almacenamiento/platinum.png",
+  "category": "Almacenamiento",
+  "features": [
+    "Rendimiento de alta densidad médica",
+    "Potencia de memoria intensiva",
+    "Almacenamiento masivo de archivos DICOM",
+    "Intercambio sin interrupciones",
+    "Alta disponibilidad garantizada",
+    "Seguridad en la conservación de datos",
+    "Plataforma escalable",
+    "Sistema listo para operar"
+  ],
+  "url": "https://drive.google.com/file/d/1CCB4DUfqYACbxdkH1pS77z3GzQKZwbTC/view?usp=drive_link"
+}

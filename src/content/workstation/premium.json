@@ -1,0 +1,19 @@
+{
+  "id": "premium",
+  "name": "Premium",
+  "description": "Interpretaci\u00f3n precisa en monitores m\u00e9dicos. Intel i7-12700 con 20 hilos. 32GB RAM DDR4 para multitarea e im\u00e1genes de alta resoluci\u00f3n.",
+  "largeDescription": "Estaci\u00f3n compacta con alto poder de procesamiento, gr\u00e1ficos profesionales y almacenamiento NVMe. Ideal para radiolog\u00eda y usuarios de aplicaciones m\u00e9dicas exigentes como reconstrucci\u00f3n 3D.",
+  "image": "@assets/img/products/WORKSTATION/PREMIUM.png",
+  "category": "Workstation",
+  "features": [
+    "Procesador Intel i7-12700 con 20 hilos.",
+    "32GB RAM DDR4 para multitarea con im\u00e1genes de alta resoluci\u00f3n.",
+    "500GB NVMe de 1TB para carga ultrarr\u00e1pida de estudios.",
+    "GPU NVIDIA A400: soporte para monitor Grado M\u00e9dico DICOM.",
+    "TPM 2.0 para seguridad cl\u00ednica y archivos.",
+    "Conexi\u00f3n total: WiFi 6, Bluetooth y LAN.",
+    "Garant\u00eda extendida de 5 a\u00f1os con soporte dedicado.",
+    "Estaci\u00f3n de f\u00e1cil perfil radiol\u00f3gico."
+  ],
+  "url": "https://drive.google.com/file/d/1LHfZXAz31eAE0Hj9yr19TZJL3aM_2j2B/view?usp=drive_link"
+}

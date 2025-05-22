@@ -1,58 +1,10 @@
 ---
 // src/components/ProductGrid.astro
+import { getCollection } from "astro:content";
 import ProductCard from "./ProductCard.astro";
 import ProductModal from "./ProductModal.astro";
-import imgC310S from "@assets/img/c310s.png";
-import imgC510S from "@assets/img/c510s.png";
 
-const products = [
-  {
-    id: "c310s",
-    name: "C310S",
-    description:
-      "Monitor de grado médico de 21.3” 3MP para diagnóstico general. Ideal para MRI, rayos X y PET/CT.",
-    largeDescription: `Monitor de 3 megapíxeles con brillo y contraste ultraaltos, amplio ángulo de visión y bajo consumo de energía. 
-    <br /><br />
-    Ideal para sistemas PACS e imágenes médicas.
-    <br /><br />
-    Cuenta con retroiluminación LED y diseño ultra delgado de panel completo.`,
-    image: imgC310S,
-    datasheetUrl:
-      "https://drive.google.com/file/d/1vCJ10uXot-thg70DdxP5yFBGFT8ThkMP/view",
-    features: [
-      "Excelente compatibilidad",
-      "Alto brillo y cumplimiento DICOM",
-      "Tecnología de calibración automática",
-      "Resolución y nivel de brillo excepcionales",
-      "Tecnología de luz azul reducida",
-      "Gamma híbrido / independiente",
-      "Sistema adaptativo de luz ambiente",
-      "Óptimo consumo energético",
-    ],
-  },
-  {
-    id: "c510s",
-    name: "C510S",
-    description:
-      "Monitor de grado médico de 21.3” 5MP para mamografía y ultrasonido. Alta precisión y función KVM.",
-    largeDescription: `
-    Monitor de 5 megapíxeles con alta resolución, brillo y contraste ultraaltos, bajo consumo y amplia compatibilidad con sistemas PACS e imágenes médicas como mamografía digital. 
-    <br /><br />
-    Su tecnología de luz azul reducida protege la visión al disminuir más del 50% de la luz dañina. `,
-    image: imgC510S,
-    datasheetUrl: "https://tudominio.com/ficha-tecnica-c510s.pdf",
-    features: [
-      "Excelente compatibilidad",
-      "Alta precisión y cumplimiento DICOM",
-      "Tecnología de calibración de uniformidad",
-      "Resolución y nivel de brillo excepcionales",
-      "Tecnología de luz azul reducida",
-      "Gamma híbrido / independiente",
-      "Sistema adaptativo de luz ambiente",
-      "Consumo energético promedio",
-    ],
-  },
-];
+const products = await getCollection("workstation");
 ---
 
 <section class="py-32 lg:py-48" id={"productos"}>
@@ -64,10 +16,10 @@ const products = [
   </h3>
 
   <div class="container mx-auto px-6 grid lg:grid-cols-2 gap-8">
-    {products.map((product) => <ProductCard product={product} />)}
+    {products.map((product) => <ProductCard product={product.data} />)}
   </div>
 
-  {products.map((product) => <ProductModal product={product} />)}
+  {products.map((product) => <ProductModal product={product.data} />)}
 </section>
 
 <script>

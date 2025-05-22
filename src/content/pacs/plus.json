@@ -1,0 +1,19 @@
+{
+  "id": "plus",
+  "name": "Plus",
+  "description": "Potencia para Ambientes Exigentes. Intel Xeon Silver 4514Y (16 n\u00facleos/32 hilos), para grandes vol\u00famenes de im\u00e1genes m\u00e9dicas.",
+  "largeDescription": "Pensado para soluciones PACS de tama\u00f1o medio a grande, ofrece rendimiento constante, expansi\u00f3n flexible y operaci\u00f3n continua. Sus bah\u00edas hot-swap permiten aumentar o mantener el almacenamiento sin interrumpir el flujo de trabajo.",
+  "image": "@assets/img/products/PACS/PLUS.png",
+  "category": "PACS",
+  "features": [
+    "Potencia para ambientes exigentes",
+    "Memoria para procesamiento intensivo",
+    "Almacenamiento SSD masivo",
+    "Hot-Swap profesional",
+    "Infraestructura confiable",
+    "Protecci\u00f3n empresarial",
+    "Listo para integrarse a tu red cl\u00ednica",
+    "Despliegue inmediato"
+  ],
+  "url": "https://drive.google.com/file/d/1sNNTUnsinDEO_cUe3c4-WNsx4kdLzrJX/view?usp=drive_link"
+}

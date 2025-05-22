@@ -1,0 +1,19 @@
+{
+  "id": "lite",
+  "name": "Almacenamiento",
+  "description": "Estudios hasta 300 imágenes.Intel i5 de 12ª gen.16GB RAM, para tareas básicas de visualización.",
+  "largeDescription": "Estación de trabajo compacta y potente, ideal para entornos clínicos o administrativos. Equipada con procesador Intel i5, almacenamiento rápido y conectividad moderna, perfecta para consulta de informes, acceso a sistemas médicos y gestión de usuarios.",
+  "image": "@assets/img/products/WORKSTATION/LITE.png",
+  "category": "Almacenamiento",
+  "features": [
+    "Rendimiento eficiente con Intel i5 de 12ª gen.",
+    "16GB RAM ideal para tareas básicas de visualización.",
+    "Gráficos NVIDIA A400 para pantallas secundarias.",
+    "Almacenamiento NVMe PCIe 4.0 rápido (512GB).",
+    "Formato compacto con ventilación activa.",
+    "Conectividad 10GbE para PACS pequeños.",
+    "Licenciamiento OEM Windows 11 Pro",
+    "Garantía 3 años con EQCare Nobilis."
+  ],
+  "url": "https://drive.google.com/file/d/17poTDoM--dOfJwzK-VWAvvOZocTua-nI/view"
+}

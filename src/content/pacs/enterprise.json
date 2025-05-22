@@ -1,0 +1,19 @@
+{
+  "id": "enterprise",
+  "name": "Enterprise",
+  "description": "Rendimiento Cl\u00ednico S\u00f3lido.Intel Xeon Silver 4510 (12 n\u00facleos/24 hilos),para PACS y flujos de trabajo multiusuario.",
+  "largeDescription": "Ideal para cl\u00ednicas que trabajan con PACS, ofrece una soluci\u00f3n estable y rentable con alta disponibilidad. Su almacenamiento puede ampliarse o mantenerse sin detener la operaci\u00f3n, gracias a sus bah\u00edas intercambiables.",
+  "image": "@assets/img/products/PACS/ENTERPRISE.png",
+  "category": "PACS",
+  "features": [
+    "Rendimiento cl\u00ednico s\u00f3lido",
+    "Memoria \u00e1gil para estudios m\u00e9dicos",
+    "Almacenamiento de alta densidad",
+    "Hot-Swap eficiente",
+    "Alta disponibilidad m\u00e9dica",
+    "Seguridad integrada",
+    "Listo para red hospitalaria",
+    "Implementaci\u00f3n inmediata"
+  ],
+  "url": "https://drive.google.com/file/d/1NxfJFGl1UC2xKuhxzXoMxNZaNr_ekK_-/view?usp=drive_link"
+}

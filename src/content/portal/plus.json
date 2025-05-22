@@ -1,0 +1,19 @@
+{
+  "id": "plus",
+  "name": "Plus",
+  "description": "Rendimiento Clínico Escalable.  Intel Xeon Silver 4510 (12 núcleos/24 hilos), para gestión de pacientes y sistemas de archivos médicos.",
+  "largeDescription": "Ideal para entornos con muchas consultas, ofrece acceso rápido y fluido al portal del paciente. Asegura alto rendimiento en la entrega de imágenes con administración remota y protección de datos.",
+  "image": "@assets/img/products/PORTAL/PLUS.png",
+  "category": "Portal",
+  "features": [
+    "Rendimiento clínico escalable",
+    "Memoria confiable y rápida",
+    "Almacenamiento de alto desempeño",
+    "Intercambio sin interrupciones",
+    "Infraestructura resiliente",
+    "Seguridad integral",
+    "Arquitectura lista para escalar",
+    "Implementación inmediata"
+  ],
+  "url": "https://drive.google.com/file/d/1jdB69lkaTDFHQ2cdcXj81tNn-fLl_4kD/view?usp=drive_link"
+}
