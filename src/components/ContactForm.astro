@@ -11,7 +11,7 @@ const inputClass =
 <form
   action="https://formspree.io/f/xpzgrnqg"
   method="POST"
-  class={`${wrapperClass} space-y-8 text-primary-1 text-sm`}
+  class={`${wrapperClass} space-y-8 text-primary-1 text-sm font-inter`}
 >
   {
     variant === "modal" && (
@@ -99,7 +99,7 @@ const inputClass =
               name="message"
               id="message"
               rows="3"
-              placeholder="Me interesa recibir una cotización para el modelo C310S/C510S. Quedo atento(a) a su respuesta. Saludos cordiales."
+              placeholder="Me interesa recibir una cotización para un equipo.Quedo atento(a) a su respuesta. Saludos cordiales."
               class={`${inputClass} resize-none`}
             />
           </div>
@@ -113,7 +113,7 @@ const inputClass =
       variant === "modal" && (
         <button
           type="button"
-          class="text-primary-1 font-normal border border-primary-1 px-4 py-2 rounded-full hover:cursor-pointer hover:bg-primary-3"
+          class="text-primary-1 font-normal border-none hover:border-primary-1 px-4 py-2 rounded-full hover:cursor-pointer"
           onclick="this.closest('form').reset()"
         >
           CANCELAR
@@ -123,7 +123,7 @@ const inputClass =
 
     <button
       type="submit"
-      class="bg-primary-1 text-white px-6 py-2 rounded-full font-normal hover:cursor-pointer hover:bg-primary-2"
+      class="bg-primary-3 text-white px-6 py-2 rounded-full font-normal hover:cursor-pointer hover:bg-primary-2"
     >
       ENVIAR
     </button>

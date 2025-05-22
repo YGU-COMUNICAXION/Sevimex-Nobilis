@@ -46,7 +46,7 @@ const { product } = Astro.props;
         </ul>
         <div class="flex flex-wrap gap-4">
           <a
-            href={product.datasheetUrl}
+            href={product.url}
             target="_blank"
             class="bg-primary-3 text-primary-1 font-semibold px-4 py-2 rounded-full text-sm hover:bg-sky-200"
           >
@@ -55,7 +55,7 @@ const { product } = Astro.props;
           <button
             id={`quote-button-${product.id}`}
             class="quote-button
-            bg-primary-1 text-white px-4 py-2 rounded-full text-sm hover:bg-blue-800 hover:cursor-pointer lg:absolute bottom-8 right-8"
+            bg-primary-3 text-white px-4 py-2 rounded-full text-sm hover:bg-primary-2 hover:cursor-pointer lg:absolute bottom-8 right-8"
           >
             COTIZAR
           </button>
