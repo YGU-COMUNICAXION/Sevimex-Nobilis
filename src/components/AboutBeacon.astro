@@ -3,7 +3,7 @@ import imgSala from "@assets/img/office.png"; // reemplaza con tu imagen real
 import { Image } from "astro:assets";
 ---
 
-<section class="relative w-full overflow-hidden" id="nosotros">  
+<section class="relative w-full overflow-hidden" id="nosotros">
   <div class="flex flex-col md:flex-row md:min-h-[80vh]">
     <!-- Imagen fuera del contenedor -->
     <div class="flex-1">
@@ -12,77 +12,24 @@ import { Image } from "astro:assets";
 
     <!-- Contenido -->
     <div
-      class="relative bg-primary-2 text-white w-full flex-1 h-full
+      class="relative bg-gradient-to-br from-[#9279D1] to-[#260E59] text-white w-full flex-1 h-full
       flex items-center md:my-8 lg:my-16 px-6 py-16 md:p-20 md:min-h-[100vh]"
     >
       <div
         class="max-w-xl mx-auto space-y-6 text-base md:text-xl leading-relaxed"
       >
         <p>
-          En Beacon desarrollamos soluciones de visualización médica de alta
-          precisión, enfocadas en mejorar la exactitud del diagnóstico y la
-          eficiencia clínica.
+          En Nobilis, nos especializamos en la comercialización de equipos de
+          tecnología médica y soluciones de almacenamiento, brindando productos
+          de alta calidad que responden a las exigencias de los sectores salud,
+          industrial y corporativo.
         </p>
         <p>
-          Nos especializamos en monitores médicos a color, diseñados bajo los
-          más estrictos estándares internacionales para ofrecer una calidad de
-          imagen confiable en todo momento.
+          Nuestro compromiso es ofrecer soluciones tecnológicas confiables, de
+          alta calidad, eficientes y adaptadas a las necesidades específicas de
+          cada cliente.
         </p>
-
-        <!-- Texto adicional oculto -->
-        <div id="extra-text" class="hidden transition-all duration-300">
-          <p>
-            Nuestros productos integran tecnología avanzada y conocimiento
-            clínico, brindando herramientas visuales con estabilización de
-            brillo, calibración automática, adaptación a la luz ambiental y
-            cumplimiento con el estándar DICOM, para un desempeño constante
-            durante todo su ciclo de vida.
-          </p>
-        </div>
-
-        <!-- Flecha toggle -->
-        <div class="flex justify-start mt-4">
-          <button
-            id="toggle-text"
-            class="transition-transform duration-300 text-white opacity-70 hover:opacity-100 hover:cursor-pointer"
-          >
-            <svg
-              id="arrow-icon"
-              class="w-6 h-6"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              viewBox="0 0 24 24"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M19 9l-7 7-7-7"></path>
-            </svg>
-          </button>
-        </div>
       </div>
     </div>
   </div>
-
-  <script>
-    document.addEventListener("astro:page-load", () => {
-      const toggleBtn = document.getElementById("toggle-text");
-      const extraText = document.getElementById("extra-text");
-      const arrow = document.getElementById("arrow-icon");
-
-      toggleBtn?.addEventListener("click", () => {
-        if (!extraText) return;
-        const isHidden = extraText.classList.contains("hidden");
-
-        if (isHidden) {
-          extraText.classList.remove("hidden");
-        } else {
-          extraText.classList.add("hidden");
-        }
-
-        arrow?.classList.toggle("rotate-180");
-      });
-    });
-  </script>
 </section>
