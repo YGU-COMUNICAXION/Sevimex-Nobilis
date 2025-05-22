@@ -30,7 +30,8 @@ let activeCategory = categories[0].id;
   </h2>
 
   <div
-    class="flex justify-center gap-6 md:gap-8 lg:gap-12 flex-wrap mb-12 font-inter text-sm md:text-base"
+    class="flex justify-center gap-6 md:gap-8 lg:gap-12 flex-wrap mb-12 lg:mb-24
+    font-inter text-sm md:text-base lg:text-lg"
   >
     {
       categories.map((cat, idx) => (
@@ -49,7 +50,7 @@ let activeCategory = categories[0].id;
     allProducts.map(({ id, products }, idx) => (
       <div
         data-category-group={id}
-        class={`container mx-auto px-6 grid lg:grid-cols-2 gap-8 ${idx !== 0 ? "hidden" : ""}`}
+        class={`container mx-auto px-6 grid grid-cols-2 lg:grid-cols-4 gap-8 ${idx !== 0 ? "hidden" : ""}`}
       >
         {products.map((product) => (
           <ProductCard product={product.data} />
