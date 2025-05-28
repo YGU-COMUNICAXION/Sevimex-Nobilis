@@ -12,6 +12,7 @@ const productsCollection = defineCollection({
       category: z.string(),
       features: z.string().array(),
       url: z.string(),
+      order: z.number().optional(),
     }),
 });
 

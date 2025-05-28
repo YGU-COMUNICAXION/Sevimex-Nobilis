@@ -4,10 +4,10 @@ import ProductCard from "./ProductCard.astro";
 import ProductModal from "./ProductModal.astro";
 
 const categories = [
-  { id: "risPacs", label: "RIS+PACS" },
-  { id: "ris", label: "RIS" },
-  { id: "pacs", label: "PACS" },
-  { id: "portal", label: "Portal" },
+  { id: "risPacs", label: "Servidores RIS+PACS" },
+  { id: "ris", label: "Servidores RIS" },
+  { id: "pacs", label: "Servidores PACS" },
+  { id: "portal", label: "Servidores Portal" },
   { id: "almacenamiento", label: "Almacenamiento" },
   { id: "workstation", label: "Workstation" },
 ];
@@ -15,11 +15,13 @@ const categories = [
 const allProducts = await Promise.all(
   categories.map(async (cat) => {
     const items = await getCollection(cat.id);
+
+    // Ordenar por orden si existe la propiedad 'order'
+    items.sort((a, b) => a.data.order - b.data.order);
+
     return { id: cat.id, products: items };
   })
 );
-
-let activeCategory = categories[0].id;
 ---
 
 <section class="py-32 lg:py-48" id={"productos"}>
