@@ -17,7 +17,7 @@ const allProducts = await Promise.all(
     const items = await getCollection(cat.id);
 
     // Ordenar por orden si existe la propiedad 'order'
-    items.sort((a, b) => a.data.order - b.data.order);
+    items.sort((a, b) => (a.data.order ?? 0) - (b.data.order ?? 0));
 
     return { id: cat.id, products: items };
   })
